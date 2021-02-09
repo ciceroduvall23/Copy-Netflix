@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Netflix | Landing page UI Design </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <a href="#" class="logo"><img src="logo.png"></a>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">TV shows</a></li>
+      <li><a href="#">Movies</a></li>
+      <li><a href="#">Latest</a></li>
+      <li><a href="#">My List</a></li>
+    
+    </ul>
+    <div class="search">
+        <input type="text" placeholder="search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+
+    </div>
+ </header>
+ <div class="banner">
+      <img src="bg.jpg" class="bg">
+      <div class="content">
+          <img src="name.png" class="movieTitle">
+      <h4>
+          <span>2020</span>
+          <span><i>12+</i></span>
+          <span>1h 55min</span>
+          <span>Action</span>
+      </h4>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e 
+            de impressos, e vem sendo utilizado desde o século XVI, quando um impressor 
+            embaralhou para fazer um livro de modelos de tipos. 
+            Lorem Ipsum sobreviveu não só a cinco séculos.</p>
+            <div class="buttons">
+             <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Play</a>
+              <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="play.png">Watch trailer</a>
+      </div>
+
+      <div class="trailer">
+          <video src="Mulan.mp4" controls="true"></video>
+          <img src="close.png" class="close" onclick="toggleVideo();">
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+     <script>
+            function toggleVideo(){
+                const trailer = document.querySelector('.trailer');
+                const video = document.querySelector('video');
+                trailer.classList.toggle('active')
+                video.currentTime = 0;
+                video.pause();
+
+          }
+        </script>
+</body>
+</html>
+
